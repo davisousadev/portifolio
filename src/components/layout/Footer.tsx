@@ -13,7 +13,7 @@ function Footer({ profileName, email, socialLinks }: FooterProps) {
       <div className="mx-auto flex max-w-6xl flex-col gap-5 px-5 md:flex-row md:items-center md:justify-between md:px-8">
         <div>
           <p className="font-bold text-ink">{profileName}</p>
-          <a className="mt-1 inline-block text-muted underline underline-offset-4" href={`mailto:${email}`}>{email}</a>
+          <a className="text-link mt-1 inline-block text-muted" href={`mailto:${email}`}>{email}</a>
         </div>
         <SocialLinks links={socialLinks} />
       </div>

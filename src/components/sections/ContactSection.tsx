@@ -18,7 +18,7 @@ function ContactSection({ contact, socialLinks, formState, onChange, onSubmit, o
       <div className="grid gap-10 md:grid-cols-[0.8fr_1.2fr]">
         <div>
           <p className="text-lg leading-8 text-muted">Tem um projeto em mente ou quer trocar uma ideia?</p>
-          <a className="mt-5 inline-block font-semibold text-accent-strong underline underline-offset-4" href={`mailto:${contact.email}`}>{contact.email}</a>
+          <a className="text-link mt-5 inline-block font-semibold text-accent-strong" href={`mailto:${contact.email}`}>{contact.email}</a>
           {contact.location ? <p className="mt-3 text-muted">{contact.location}</p> : null}
           <div className="mt-8"><SocialLinks links={socialLinks} /></div>
         </div>

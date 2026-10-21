@@ -12,7 +12,7 @@ describe('portfolio sections', () => {
 
     expect(screen.getByRole('heading', { name: profile.name })).toBeInTheDocument();
     expect(screen.getByText(profile.headline)).toBeInTheDocument();
-    expect(screen.getByText('AM')).toBeInTheDocument();
+    expect(screen.getByText('DS')).toBeInTheDocument();
   });
 
   it('renders the biography and skill groups', () => {

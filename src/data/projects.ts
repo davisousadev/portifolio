@@ -5,7 +5,7 @@ export const projects: Project[] = [
     id: 'finance-flow',
     title: 'Finance Flow',
     description: 'Finance Flow é um sistema para gestão de clientes, planos e assinaturas. ',
-    technologies: ['React', 'TypeScript', 'Drizzle', 'Fastify', 'PostgreSQL', 'Fastify', 'TailwindCSS', 'ShadCN'],
+    technologies: ['React', 'TypeScript', 'Drizzle', 'Fastify', 'PostgreSQL', 'TailwindCSS', 'ShadCN'],
     codeUrl: 'https://github.com/davisousadev/finance-flow',
     featured: true,
   },

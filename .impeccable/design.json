@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-21T00:00:00Z",
+  "title": "Design System: Portfólio Davi Sousa",
+  "extensions": {
+    "colorMeta": {
+      "canvas": { "role": "neutral", "displayName": "Papel marfim", "canonical": "#f7f5f0", "tonalRamp": ["#292622", "#4a4540", "#6b665f", "#8c8780", "#aca79f", "#cbc6bd", "#e4dfd7", "#f7f5f0"] },
+      "surface": { "role": "neutral", "displayName": "Branco de superfície", "canonical": "#ffffff", "tonalRamp": ["#292929", "#4a4a4a", "#6b6b6b", "#8c8c8c", "#adadad", "#cccccc", "#e6e6e6", "#ffffff"] },
+      "ink": { "role": "neutral", "displayName": "Tinta azul-petróleo", "canonical": "#172026", "tonalRamp": ["#172026", "#29343a", "#3e4b52", "#56636a", "#707d83", "#8c989d", "#aab4b8", "#c8d0d2"] },
+      "muted": { "role": "neutral", "displayName": "Cinza de anotação", "canonical": "#52606a", "tonalRamp": ["#252d31", "#374249", "#4a575e", "#5f6d74", "#748188", "#8b979d", "#a3adb2", "#bbc3c7"] },
+      "accent": { "role": "primary", "displayName": "Coral queimado", "canonical": "#d95f4f", "tonalRamp": ["#431812", "#66251d", "#88372c", "#a9473b", "#c65a4a", "#d97567", "#e7978b", "#f4b9b1"] },
+      "accent-strong": { "role": "primary", "displayName": "Coral profundo", "canonical": "#a53b31", "tonalRamp": ["#3b0f0c", "#571916", "#72231e", "#8d2d27", "#a53b31", "#bd5147", "#d16d64", "#e18f88"] },
+      "border": { "role": "neutral", "displayName": "Linha de papel", "canonical": "#d7d2c9", "tonalRamp": ["#3a3937", "#5e5c58", "#81807b", "#a3a19b", "#bbb9b2", "#d7d2c9", "#e6e2db", "#f4f1eb"] },
+      "success": { "role": "tertiary", "displayName": "Verde de confirmação", "canonical": "#247a55", "tonalRamp": ["#09261a", "#103d2a", "#18553b", "#1f6b4c", "#247a55", "#4b9976", "#75b698", "#a2d0b8"] },
+      "danger": { "role": "tertiary", "displayName": "Vermelho de atenção", "canonical": "#b42318", "tonalRamp": ["#350805", "#54110c", "#741812", "#941f16", "#b42318", "#c94a40", "#dd7169", "#ed9d98"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Nome profissional", "purpose": "Hero headline and first impression." },
+      "body": { "displayName": "Texto de leitura", "purpose": "Biografia, descrições e instruções." }
+    },
+    "shadows": [
+      { "name": "card-sm", "value": "0 1px 2px 0 rgb(0 0 0 / 0.05)", "purpose": "Separação discreta dos cartões de projeto." }
+    ],
+    "motion": [
+      { "name": "state-standard", "value": "180ms ease", "purpose": "Mudanças de cor em tema e controles." },
+      { "name": "project-hover", "value": "200ms ease", "purpose": "Escala mínima de cartões no hover." },
+      { "name": "reduced-motion", "value": "0.01ms", "purpose": "Redução de transições e animações quando solicitada pelo sistema." }
+    ],
+    "breakpoints": [
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ação principal coral para iniciar uma conversa ou envio.",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\">Vamos conversar</button>",
+      "css": ".ds-btn-primary { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; padding: 12px 20px; border: 0; border-radius: 6px; background: #d95f4f; color: #ffffff; font: 600 14px/1.25 'Trebuchet MS', sans-serif; transition: background-color 180ms ease; } .ds-btn-primary:hover { background: #a53b31; } .ds-btn-primary:focus-visible { outline: 3px solid #d95f4f; outline-offset: 3px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Ação alternativa com contraste de borda.",
+      "html": "<button class=\"ds-btn-secondary\" type=\"button\">Ver projetos</button>",
+      "css": ".ds-btn-secondary { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; padding: 12px 20px; border: 1px solid #d7d2c9; border-radius: 6px; background: #ffffff; color: #172026; font: 600 14px/1.25 'Trebuchet MS', sans-serif; transition: border-color 180ms ease; } .ds-btn-secondary:hover { border-color: #d95f4f; } .ds-btn-secondary:focus-visible { outline: 3px solid #d95f4f; outline-offset: 3px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Campo de contato com foco explícito e leitura temática.",
+      "html": "<label class=\"ds-field-label\">Nome<input class=\"ds-field\" type=\"text\" /></label>",
+      "css": ".ds-field-label { display: grid; gap: 8px; color: #172026; font: 600 16px/1.25 'Trebuchet MS', sans-serif; } .ds-field { min-height: 44px; padding: 8px 12px; border: 1px solid #d7d2c9; border-radius: 6px; background: #ffffff; color: #172026; font: 400 16px/1.75 'Trebuchet MS', sans-serif; } .ds-field:focus-visible { outline: 3px solid #d95f4f; outline-offset: 3px; }"
+    },
+    {
+      "name": "Project Card",
+      "kind": "card",
+      "refersTo": "project-card",
+      "description": "Container editorial para uma evidência de trabalho.",
+      "html": "<article class=\"ds-project-card\"><h3>Finance Flow</h3><p>Gestão de clientes, planos e assinaturas.</p></article>",
+      "css": ".ds-project-card { height: 100%; padding: 24px; border: 2px dashed #d7d2c9; border-radius: 8px; background: #ffffff; color: #172026; box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); transition: transform 200ms ease; } .ds-project-card:hover { transform: scale(1.02); } .ds-project-card h3 { margin: 0; font: 700 20px/1.25 'Trebuchet MS', sans-serif; } .ds-project-card p { margin: 12px 0 0; color: #52606a; font: 400 16px/1.75 'Trebuchet MS', sans-serif; }"
+    },
+    {
+      "name": "Sticky Navigation",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Cabeçalho persistente para orientação entre as seções.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Navegação principal\"><a href=\"#projetos\">Projetos</a></nav>",
+      "css": ".ds-nav { position: sticky; top: 0; z-index: 10; padding: 16px 20px; border-bottom: 1px solid #d7d2c9; background: rgb(247 245 240 / 0.95); backdrop-filter: blur(8px); color: #52606a; font: 600 14px/1.25 'Trebuchet MS', sans-serif; } .ds-nav a:hover { color: #a53b31; } .ds-nav a:focus-visible { outline: 3px solid #d95f4f; outline-offset: 3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Caderno de Campo Digital",
+    "overview": "O sistema trata o portfólio como um registro de trabalho em andamento: acolhedor o bastante para convidar uma conversa, direto o bastante para deixar projetos e competências falarem primeiro. A composição é leve e editorial, com fundo de papel, superfícies brancas, tinta azul-petróleo e um coral quente que marca ações e pontos de orientação.\n\nA personalidade aparece em detalhes táteis e honestos: bordas tracejadas nos cartões, links sublinhados, avatar emoldurado e pequenos deslocamentos no hover. A interface evita excesso corporativo, neon, gradientes fortes e maximalismo.",
+    "keyCharacteristics": ["Papel claro e camada escura correspondente.", "Coral como sinal de ação e orientação.", "Tipografia Trebuchet MS com títulos fortes e corpo espaçado.", "Componentes artesanais e táteis."],
+    "rules": [
+      { "name": "The Coral Signal Rule", "body": "O coral deve indicar ação, foco ou orientação; não deve virar textura ou preenchimento indiscriminado.", "section": "colors" },
+      { "name": "The One Family Rule", "body": "A hierarquia vem de peso, escala e espaço; não introduzir uma segunda família tipográfica sem uma decisão explícita de identidade.", "section": "typography" },
+      { "name": "The Flat-by-Default Rule", "body": "Superfícies descansam no plano; sombra e movimento só aparecem para esclarecer agrupamento ou resposta a interação.", "section": "elevation" }
+    ],
+    "dos": ["Do usar o coral para indicar o próximo passo.", "Do preservar os papéis tonais nos dois temas.", "Do manter foco suficiente para toque e teclado.", "Do usar bordas, sublinhados e pequenos movimentos."],
+    "donts": ["Don't introduzir excesso corporativo, neon, gradientes fortes ou maximalismo.", "Don't usar sombra pesada, cartões aninhados ou decoração concorrente.", "Don't trocar a tipografia por uma família ornamental sem decisão.", "Don't usar coral como fundo dominante de seções inteiras."]
+  }
+}
